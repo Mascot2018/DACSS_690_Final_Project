@@ -1,0 +1,21 @@
+
+version: 2
+
+models:
+  - name: hired_last_month_model
+    description: "This model will find all of the employees hired in the last month in UMASS Dining Services, and return their Rand_ID, Start Date, Job Title, Grade, and Department"
+    columns:
+      - name: id
+        description: "The Primary key is the Rand_ID"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: still_working_May_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null
