@@ -1,21 +1,46 @@
 
 version: 2
 
-models:
-  - name: hired_last_month_model
-    description: "This model will find all of the employees hired in the last month in UMASS Dining Services, and return their Rand_ID, Start Date, Job Title, Grade, and Department"
-    columns:
-      - name: id
-        description: "The Primary key is the Rand_ID"
-        data_tests:
-          - unique
-          - not_null
 
-  - name: still_working_May_model
-    description: "A starter dbt model"
+models:
+  - name: hired_last_3_months_model
+    description: "This model will find all of the employees in UMASS Dining Services hired within 3 months of when our table was generated, and return their Rand_ID, Start Date, Job Title, Grade, and Department"
     columns:
-      - name: id
-        description: "The primary key for this table"
-        data_tests:
+      - name: Rand_ID 
+        description: "The Primary key is the Rand_ID"
+        tests:
           - unique
           - not_null
+      - name: "Start Date"
+        description: "The date the employee was hired"
+      - name: Grade
+        description: "The employee's grade"
+      - name: Dept
+        description: "The department the employee works in"
+        tests:
+        - not_null
+      - name: "SYSDATE"
+        description: "The date the data was generated"
+  
+
+
+  - name: still_working_model
+    description: "This model will see which employees found in the hired_last_3_month_model table are still working as of when a more recent table was generated, and return the same output."
+    columns:
+      - name: Rand_ID 
+        description: "The Primary key is the Rand_ID"
+        tests:
+          - unique
+          - not_null
+      - name: "Start Date"
+        description: "The date the employee was hired"
+      - name: Grade
+        description: "The employee's grade"
+      - name: Dept
+        description: "The department the employee works in"
+        tests:
+        - not_null
+      - name: "SYSDATE"
+        description: "The date the data was generated"
+
+

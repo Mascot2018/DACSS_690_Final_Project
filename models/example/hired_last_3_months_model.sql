@@ -1,11 +1,5 @@
 
-/*
-    Welcome to your first dbt model!
-    Did you know that you can also configure models directly within SQL files?
-    This will override configurations stated in dbt_project.yml
 
-    Try changing "table" to "view" below
-*/
 
 {{ config(materialized='table') }}
 
@@ -14,23 +8,25 @@
 WITH recent_hires AS (
     SELECT 
        Rand_ID,
-        `Job Title`,  -- Use backticks to reference column names with spaces
-        Grade,
-        Dept,
-        `Start Date`,
-        SYSDATE  -- Assuming SYSDATE is a column in the Jan_2024 table
-    FROM 
-        `dacss-690-final-project.Final_Project_Data.Jan_2024`
---    
+        `Job Title`,  --Job Title
+        Grade, --Employee Grade
+        Dept, --Department
+        `Start Date`, --Date employee was hired/started working.
+        SYSDATE,  -- SYSDATE is a column in my tables.
+        DATE_DIFF(SYSDATE, `Start Date`, DAY) AS Days_Worked --Obtain the number of days employees have worked as of date of table generation.
+    FROM `dacss-690-final-project.Final_Project_Data.Initial_List`
+        
+    
 )
 
 SELECT 
     Rand_ID,
-    `Job Title`,  -- Use backticks to reference column names with spaces
+    `Job Title`,  
     Grade,
     Dept,
-    `Start Date`
+    `Start Date`,
+    Days_Worked
 FROM 
     recent_hires
 WHERE 
-    `Start Date` >= DATE_SUB(SYSDATE, INTERVAL 3 MONTH)  -- Correct use of DATE_SUB and CAST
+    `Start Date` >= DATE_SUB(SYSDATE, INTERVAL 3 MONTH)  --Filters for employees who have been hired withing last 3 months of table generation.
