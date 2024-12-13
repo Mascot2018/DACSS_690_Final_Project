@@ -1,0 +1,8 @@
+version: 2
+sources:
+  - name: Final_Project_Data
+    database: dacss-690-final-project
+    schema: Final_Project_Data
+    tables:
+      - name: Initial_List
+      - name: Final_List

@@ -1,0 +1,262 @@
+Executing DBT command: dbt test --debug
+stdout:
+[0m23:55:58  Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFB49782C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFB497A180>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFB4DD5E20>]}
+[0m23:55:58  An error was encountered while trying to send an event
+[0m23:55:58  Running with dbt=1.9.0
+[0m23:55:58  running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'D:\\UMASS Amherst DACSS\\DACSS_690_Final_Project\\dbt-final-project\\dbt_final_project\\logs', 'debug': 'True', 'profiles_dir': 'C:\\Users\\kaush\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt test --debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m23:56:00  Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '48e85c4d-3cb6-430b-bd6d-8badd7210b0e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFB4E1F0E0>]}
+[0m23:56:00  An error was encountered while trying to send an event
+[0m23:56:00  Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '48e85c4d-3cb6-430b-bd6d-8badd7210b0e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFB49032F0>]}
+[0m23:56:00  An error was encountered while trying to send an event
+[0m23:56:00  Registered adapter: bigquery=1.9.0
+[0m23:56:01  checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m23:56:02  Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:56:02  Partial parsing enabled, no changes found, skipping parsing
+[0m23:56:02  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '48e85c4d-3cb6-430b-bd6d-8badd7210b0e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFBF688890>]}
+[0m23:56:02  An error was encountered while trying to send an event
+[0m23:56:02  Wrote artifact WritableManifest to D:\UMASS Amherst DACSS\DACSS_690_Final_Project\dbt-final-project\dbt_final_project\target\manifest.json
+[0m23:56:02  Wrote artifact SemanticManifest to D:\UMASS Amherst DACSS\DACSS_690_Final_Project\dbt-final-project\dbt_final_project\target\semantic_manifest.json
+[0m23:56:02  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '48e85c4d-3cb6-430b-bd6d-8badd7210b0e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFBFBF2DE0>]}
+[0m23:56:02  An error was encountered while trying to send an event
+[0m23:56:02  Found 2 models, 6 data tests, 2 sources, 487 macros
+[0m23:56:02  Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '48e85c4d-3cb6-430b-bd6d-8badd7210b0e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFBCDCA660>]}
+[0m23:56:02  An error was encountered while trying to send an event
+[0m23:56:02  
+[0m23:56:02  Concurrency: 4 threads (target='bigquery')
+[0m23:56:02  
+[0m23:56:02  Acquiring new bigquery connection 'master'
+[0m23:56:02  Acquiring new bigquery connection 'list_dacss-690-final-project_Final_Project_Data_Output'
+[0m23:56:02  Opening a new connection, currently in state init
+[0m23:56:04  Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '48e85c4d-3cb6-430b-bd6d-8badd7210b0e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFBFA26B70>]}
+[0m23:56:04  An error was encountered while trying to send an event
+[0m23:56:04  Opening a new connection, currently in state init
+[0m23:56:04  Began running node test.dbt_final_project.not_null_hired_last_3_months_model_Dept.35209d9534
+[0m23:56:04  Began running node test.dbt_final_project.not_null_hired_last_3_months_model_Rand_ID.96b76a9434
+[0m23:56:04  Began running node test.dbt_final_project.not_null_still_working_model_Dept.2adff12410
+[0m23:56:04  Began running node test.dbt_final_project.not_null_still_working_model_Rand_ID.5510691560
+[0m23:56:04  1 of 6 START test not_null_hired_last_3_months_model_Dept ...................... [RUN]
+[0m23:56:04  2 of 6 START test not_null_hired_last_3_months_model_Rand_ID ................... [RUN]
+[0m23:56:04  3 of 6 START test not_null_still_working_model_Dept ............................ [RUN]
+[0m23:56:04  4 of 6 START test not_null_still_working_model_Rand_ID ......................... [RUN]
+[0m23:56:04  Acquiring new bigquery connection 'test.dbt_final_project.not_null_hired_last_3_months_model_Dept.35209d9534'
+[0m23:56:04  Acquiring new bigquery connection 'test.dbt_final_project.not_null_hired_last_3_months_model_Rand_ID.96b76a9434'
+[0m23:56:04  Acquiring new bigquery connection 'test.dbt_final_project.not_null_still_working_model_Dept.2adff12410'
+[0m23:56:04  Acquiring new bigquery connection 'test.dbt_final_project.not_null_still_working_model_Rand_ID.5510691560'
+[0m23:56:04  Began compiling node test.dbt_final_project.not_null_hired_last_3_months_model_Dept.35209d9534
+[0m23:56:04  Began compiling node test.dbt_final_project.not_null_hired_last_3_months_model_Rand_ID.96b76a9434
+[0m23:56:04  Began compiling node test.dbt_final_project.not_null_still_working_model_Dept.2adff12410
+[0m23:56:04  Began compiling node test.dbt_final_project.not_null_still_working_model_Rand_ID.5510691560
+[0m23:56:04  Writing injected SQL for node "test.dbt_final_project.not_null_hired_last_3_months_model_Dept.35209d9534"
+[0m23:56:04  Writing injected SQL for node "test.dbt_final_project.not_null_hired_last_3_months_model_Rand_ID.96b76a9434"
+[0m23:56:04  Writing injected SQL for node "test.dbt_final_project.not_null_still_working_model_Dept.2adff12410"
+[0m23:56:04  Writing injected SQL for node "test.dbt_final_project.not_null_still_working_model_Rand_ID.5510691560"
+[0m23:56:04  Began executing node test.dbt_final_project.not_null_hired_last_3_months_model_Dept.35209d9534
+[0m23:56:04  Began executing node test.dbt_final_project.not_null_hired_last_3_months_model_Rand_ID.96b76a9434
+[0m23:56:04  Began executing node test.dbt_final_project.not_null_still_working_model_Dept.2adff12410
+[0m23:56:04  Began executing node test.dbt_final_project.not_null_still_working_model_Rand_ID.5510691560
+[0m23:56:04  Writing runtime sql for node "test.dbt_final_project.not_null_hired_last_3_months_model_Dept.35209d9534"
+[0m23:56:04  Writing runtime sql for node "test.dbt_final_project.not_null_hired_last_3_months_model_Rand_ID.96b76a9434"
+[0m23:56:04  Writing runtime sql for node "test.dbt_final_project.not_null_still_working_model_Dept.2adff12410"
+[0m23:56:04  Writing runtime sql for node "test.dbt_final_project.not_null_still_working_model_Rand_ID.5510691560"
+[0m23:56:04  On test.dbt_final_project.not_null_hired_last_3_months_model_Dept.35209d9534: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "dbt_final_project", "target_name": "bigquery", "node_id": "test.dbt_final_project.not_null_hired_last_3_months_model_Dept.35209d9534"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select Dept
+from `dacss-690-final-project`.`Final_Project_Data_Output`.`hired_last_3_months_model`
+where Dept is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:56:04  On test.dbt_final_project.not_null_hired_last_3_months_model_Rand_ID.96b76a9434: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "dbt_final_project", "target_name": "bigquery", "node_id": "test.dbt_final_project.not_null_hired_last_3_months_model_Rand_ID.96b76a9434"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select Rand_ID
+from `dacss-690-final-project`.`Final_Project_Data_Output`.`hired_last_3_months_model`
+where Rand_ID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:56:04  Opening a new connection, currently in state init
+[0m23:56:04  Opening a new connection, currently in state init
+[0m23:56:04  On test.dbt_final_project.not_null_still_working_model_Rand_ID.5510691560: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "dbt_final_project", "target_name": "bigquery", "node_id": "test.dbt_final_project.not_null_still_working_model_Rand_ID.5510691560"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select Rand_ID
+from `dacss-690-final-project`.`Final_Project_Data_Output`.`still_working_model`
+where Rand_ID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:56:04  Opening a new connection, currently in state init
+[0m23:56:04  On test.dbt_final_project.not_null_still_working_model_Dept.2adff12410: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "dbt_final_project", "target_name": "bigquery", "node_id": "test.dbt_final_project.not_null_still_working_model_Dept.2adff12410"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select Dept
+from `dacss-690-final-project`.`Final_Project_Data_Output`.`still_working_model`
+where Dept is null
+
+
+
+      
+    ) dbt_internal_test
+[0m23:56:04  Opening a new connection, currently in state init
+[0m23:56:05  BigQuery adapter: https://console.cloud.google.com/bigquery?project=dacss-690-final-project&j=bq:US:c43f9e51-335d-4c0e-8022-119171615ca5&page=queryresults
+[0m23:56:05  BigQuery adapter: https://console.cloud.google.com/bigquery?project=dacss-690-final-project&j=bq:US:5973d137-be7f-4866-bdc2-5a9559e33ed6&page=queryresults
+[0m23:56:05  BigQuery adapter: https://console.cloud.google.com/bigquery?project=dacss-690-final-project&j=bq:US:65d5db40-4b39-4572-8934-3f0de1f0444f&page=queryresults
+[0m23:56:05  BigQuery adapter: https://console.cloud.google.com/bigquery?project=dacss-690-final-project&j=bq:US:17a74ac4-8a48-434d-bb18-d16a661c7e4b&page=queryresults
+[0m23:56:06  3 of 6 PASS not_null_still_working_model_Dept .................................. [[32mPASS[0m in 1.52s]
+[0m23:56:06  Finished running node test.dbt_final_project.not_null_still_working_model_Dept.2adff12410
+[0m23:56:06  2 of 6 PASS not_null_hired_last_3_months_model_Rand_ID ......................... [[32mPASS[0m in 1.53s]
+[0m23:56:06  Began running node test.dbt_final_project.unique_hired_last_3_months_model_Rand_ID.1b35ba1ec6
+[0m23:56:06  1 of 6 PASS not_null_hired_last_3_months_model_Dept ............................ [[32mPASS[0m in 1.53s]
+[0m23:56:06  Finished running node test.dbt_final_project.not_null_hired_last_3_months_model_Rand_ID.96b76a9434
+[0m23:56:06  5 of 6 START test unique_hired_last_3_months_model_Rand_ID ..................... [RUN]
+[0m23:56:06  Finished running node test.dbt_final_project.not_null_hired_last_3_months_model_Dept.35209d9534
+[0m23:56:06  Began running node test.dbt_final_project.unique_still_working_model_Rand_ID.19a4cc9644
+[0m23:56:06  Re-using an available connection from the pool (formerly test.dbt_final_project.not_null_still_working_model_Dept.2adff12410, now test.dbt_final_project.unique_hired_last_3_months_model_Rand_ID.1b35ba1ec6)
+[0m23:56:06  4 of 6 PASS not_null_still_working_model_Rand_ID ............................... [[32mPASS[0m in 1.54s]
+[0m23:56:06  6 of 6 START test unique_still_working_model_Rand_ID ........................... [RUN]
+[0m23:56:06  Began compiling node test.dbt_final_project.unique_hired_last_3_months_model_Rand_ID.1b35ba1ec6
+[0m23:56:06  Finished running node test.dbt_final_project.not_null_still_working_model_Rand_ID.5510691560
+[0m23:56:06  Re-using an available connection from the pool (formerly test.dbt_final_project.not_null_hired_last_3_months_model_Rand_ID.96b76a9434, now test.dbt_final_project.unique_still_working_model_Rand_ID.19a4cc9644)
+[0m23:56:06  Writing injected SQL for node "test.dbt_final_project.unique_hired_last_3_months_model_Rand_ID.1b35ba1ec6"
+[0m23:56:06  Began compiling node test.dbt_final_project.unique_still_working_model_Rand_ID.19a4cc9644
+[0m23:56:06  Writing injected SQL for node "test.dbt_final_project.unique_still_working_model_Rand_ID.19a4cc9644"
+[0m23:56:06  Began executing node test.dbt_final_project.unique_hired_last_3_months_model_Rand_ID.1b35ba1ec6
+[0m23:56:06  Writing runtime sql for node "test.dbt_final_project.unique_hired_last_3_months_model_Rand_ID.1b35ba1ec6"
+[0m23:56:06  Began executing node test.dbt_final_project.unique_still_working_model_Rand_ID.19a4cc9644
+[0m23:56:06  Writing runtime sql for node "test.dbt_final_project.unique_still_working_model_Rand_ID.19a4cc9644"
+[0m23:56:06  On test.dbt_final_project.unique_hired_last_3_months_model_Rand_ID.1b35ba1ec6: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "dbt_final_project", "target_name": "bigquery", "node_id": "test.dbt_final_project.unique_hired_last_3_months_model_Rand_ID.1b35ba1ec6"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select Rand_ID as unique_field
+  from `dacss-690-final-project`.`Final_Project_Data_Output`.`hired_last_3_months_model`
+  where Rand_ID is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:56:06  On test.dbt_final_project.unique_still_working_model_Rand_ID.19a4cc9644: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "dbt_final_project", "target_name": "bigquery", "node_id": "test.dbt_final_project.unique_still_working_model_Rand_ID.19a4cc9644"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with dbt_test__target as (
+
+  select Rand_ID as unique_field
+  from `dacss-690-final-project`.`Final_Project_Data_Output`.`still_working_model`
+  where Rand_ID is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m23:56:06  Opening a new connection, currently in state closed
+[0m23:56:06  Opening a new connection, currently in state closed
+[0m23:56:07  BigQuery adapter: https://console.cloud.google.com/bigquery?project=dacss-690-final-project&j=bq:US:03b7759b-6c4d-4a0a-ab0f-ac5201b5774e&page=queryresults
+[0m23:56:07  BigQuery adapter: https://console.cloud.google.com/bigquery?project=dacss-690-final-project&j=bq:US:a7c28d5e-9ccd-4dee-b6e7-6306e172322f&page=queryresults
+[0m23:56:07  6 of 6 PASS unique_still_working_model_Rand_ID ................................. [[32mPASS[0m in 1.26s]
+[0m23:56:07  Finished running node test.dbt_final_project.unique_still_working_model_Rand_ID.19a4cc9644
+[0m23:56:07  5 of 6 PASS unique_hired_last_3_months_model_Rand_ID ........................... [[32mPASS[0m in 1.49s]
+[0m23:56:07  Finished running node test.dbt_final_project.unique_hired_last_3_months_model_Rand_ID.1b35ba1ec6
+[0m23:56:07  Opening a new connection, currently in state closed
+[0m23:56:07  Connection 'master' was properly closed.
+[0m23:56:07  Connection 'list_dacss-690-final-project_Final_Project_Data_Output' was properly closed.
+[0m23:56:07  Connection 'test.dbt_final_project.not_null_hired_last_3_months_model_Dept.35209d9534' was properly closed.
+[0m23:56:07  Connection 'test.dbt_final_project.unique_still_working_model_Rand_ID.19a4cc9644' was properly closed.
+[0m23:56:07  Connection 'test.dbt_final_project.unique_hired_last_3_months_model_Rand_ID.1b35ba1ec6' was properly closed.
+[0m23:56:07  Connection 'test.dbt_final_project.not_null_still_working_model_Rand_ID.5510691560' was properly closed.
+[0m23:56:07  
+[0m23:56:07  Finished running 6 data tests in 0 hours 0 minutes and 5.47 seconds (5.47s).
+[0m23:56:07  Command end result
+[0m23:56:07  Wrote artifact WritableManifest to D:\UMASS Amherst DACSS\DACSS_690_Final_Project\dbt-final-project\dbt_final_project\target\manifest.json
+[0m23:56:07  Wrote artifact SemanticManifest to D:\UMASS Amherst DACSS\DACSS_690_Final_Project\dbt-final-project\dbt_final_project\target\semantic_manifest.json
+[0m23:56:07  Wrote artifact RunExecutionResult to D:\UMASS Amherst DACSS\DACSS_690_Final_Project\dbt-final-project\dbt_final_project\target\run_results.json
+[0m23:56:07  
+[0m23:56:07  [32mCompleted successfully[0m
+[0m23:56:07  
+[0m23:56:07  Done. PASS=6 WARN=0 ERROR=0 SKIP=0 TOTAL=6
+[0m23:56:07  Command `dbt test` succeeded at 18:56:07.861761 after 9.65 seconds
+[0m23:56:07  Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFB4DFAF60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFBFC8C4A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFBFC50560>]}
+[0m23:56:07  An error was encountered while trying to send an event
+[0m23:56:07  Flushing usage events
+
+stderr:
+
