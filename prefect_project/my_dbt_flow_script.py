@@ -23,7 +23,7 @@ def run_dbt_command(command: str, project_dir: str):
     # Check for any errors and raise an exception with stderr
     if result.returncode != 0:
         raise Exception(f"DBT command failed with error:\n{result.stderr}")
-
+##I was getting a lot of strange errors while running prefect so I expanded my error message capture.
 
 # Define the flow that runs dbt commands
 @flow

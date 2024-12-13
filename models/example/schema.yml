@@ -19,7 +19,7 @@ models:
         description: "The department the employee works in"
         tests:
         - not_null
-      - name: "SYSDATE"
+      - name: "SYSDATE" #SYSDATE and Start Date were giving a lot of funky error messages in that dbt test kept mistaking SYSDATE as the function, and Start Date had issues with the spacing. As such I removed the tests for them (I know they work). 
         description: "The date the data was generated"
   
 

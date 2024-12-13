@@ -1,9 +1,7 @@
 
 -- Use the `ref` function to select from other models
 
--- models/employees_still_working_in_may.sql
 
--- models/employees_still_working_in_may.sql
 {{ config(materialized='table') }}
 
 WITH recent_hires AS (
@@ -19,7 +17,7 @@ WITH recent_hires AS (
 still_working AS (
     SELECT 
         Rand_ID,
-        `Job Title`,  -- Use backticks to reference column names with spaces
+        `Job Title`,  
         Grade,
         Dept,
         DATE_DIFF(SYSDATE, `Start Date`, DAY) AS Days_Worked
